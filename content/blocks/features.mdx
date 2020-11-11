@@ -1,0 +1,70 @@
+export const Features = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <H2 m="0" lineHeight="tight" textAlign="center">
+        Our Services
+      </H2>
+      <P fontSize="xl|2xl" mt="2" textAlign="center">
+        We digitize your physical world for better asset tracking.
+      </P>
+      <Grid col="1|2|3" mt="8|10|12" gap="4|6|8">
+        <Feature
+          icon="users"
+          heading="Employee Management"
+          description="Better manage when your employees come in and out of work."
+        />
+        <Feature
+          icon="shuffle"
+          heading="Inventory Management"
+          description="Know exactly where your inventory is at all times."
+        />
+        <Feature
+          icon="trending-up"
+          heading="Analytics"
+          description="Improve business process with in-depth asset tracking analytics."
+        />
+        <Feature
+          icon="bar-chart-2"
+          heading="Smart Marketing"
+          description="Engage with your customers in unique ways."
+        />
+        <Feature
+          icon="code"
+          heading="Integrations"
+          description="We provide multiple integrations with our service. Don't see one? Let us know!"
+        />
+        <Feature
+          icon="activity"
+          heading="Lifetime support"
+          description="We provide 24/7 support for all your business needs."
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Feature = ({ icon, heading, description, ...props }) => (
+  <Flexbox
+    flexDirection="column"
+    textAlign="center"
+    borderWidth="1px"
+    rounded="lg"
+    p="4|6|8"
+    {...props}
+  >
+    <Flexbox
+      bg="primary"
+      color="white"
+      rounded="full"
+      size="16"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Icon name={icon} size="8" />
+    </Flexbox>
+    <H3 fontSize="2xl" mt="4|6" mb="0">
+      {heading}
+    </H3>
+    <P mb="0">{description}</P>
+  </Flexbox>
+)
