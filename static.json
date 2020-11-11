@@ -1,0 +1,22 @@
+{
+  "root": "/",
+  "headers": {
+    "/**": {
+      "Cache-Control": "public, max-age=0, must-revalidate"
+    },
+    "/**.css": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "/**.js": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "/**.mdx": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "/content/images/**": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    }
+  },
+  "https_only": true,
+  "error_page": "404.html"
+}
