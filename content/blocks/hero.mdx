@@ -1,10 +1,13 @@
-export const Hero = ({header, text, buttonText}) => {
+export const Hero = ({header, text, buttonText, imageUrl}) => {
+  if(imageUrl == null) {
+    imageUrl = "placeholder.jpg";
+  }
   return (
     <Section py="8|12|16|24">
       <Container>
         <Grid col="1|2" gap="8|12|16" alignItems="center">
           <Image
-            src="placeholder.jpg"
+            src={imageUrl}
             colStart="null|2"
             w="full"
             rounded="lg"
