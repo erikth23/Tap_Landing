@@ -1,4 +1,4 @@
-export const Hero = ({header, text, buttonText, imageUrl}) => {
+export const Hero = ({header, text, buttonText, imageUrl, buttonLink}) => {
   if(imageUrl == null) {
     imageUrl = "placeholder.jpg";
   }
@@ -24,7 +24,7 @@ export const Hero = ({header, text, buttonText, imageUrl}) => {
             <P fontSize="xl|2xl" mt="2">
               {text}
             </P>
-            <ButtonLink href="#" variant="primary">
+            <ButtonLink href={buttonLink} variant="primary">
               {buttonText}
               <Icon name="arrow-right" ml="4" />
             </ButtonLink>

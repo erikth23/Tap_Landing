@@ -20,16 +20,14 @@ export const FooterBlock = () => {
             my="6|0"
             gap="4|8"
           />
-          <Grid col="2" gap="4" mt={[4, 0]}>
-            <A href="#" color="text">
-              <Icon name="twitter" size={5} />
-              <VisuallyHidden>Follow on Twitter</VisuallyHidden>
-            </A>
-            <A href="#" color="text">
-              <Icon name="instagram" size={5} />
-              <VisuallyHidden>Follow on Instagram</VisuallyHidden>
-            </A>
-          </Grid>
+        {
+          // <Grid col="2" gap="4" mt={[4, 0]}>
+          //   <A href="#" color="text">
+          //     <Icon name="twitter" size={5} />
+          //     <VisuallyHidden>Follow on Twitter</VisuallyHidden>
+          //   </A>
+          // </Grid>
+        }
         </Flexbox>
         <Div
           borderTopWidth={1}
@@ -38,7 +36,10 @@ export const FooterBlock = () => {
           mt={[4, 5, 6]}
         >
           <P fontSize="sm" mt="0">
-            © {new Date().getFullYear()} {title}
+            <A href="/privacy-policy" color="text">
+                Privacy Policy
+            </A>
+             © {new Date().getFullYear()} {title}
           </P>
         </Div>
       </Container>
