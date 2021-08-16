@@ -36,10 +36,15 @@ export const FooterBlock = () => {
           mt={[4, 5, 6]}
         >
           <P fontSize="sm" mt="0">
+             © {new Date().getFullYear()} {title}
+            &nbsp;|&nbsp;
             <A href="/privacy-policy" color="text">
                 Privacy Policy
             </A>
-             © {new Date().getFullYear()} {title}
+            &nbsp;|&nbsp;
+            <A href="/terms-of-use" color="text">
+                Terms of Use
+            </A>
           </P>
         </Div>
       </Container>
